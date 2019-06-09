@@ -1,7 +1,7 @@
 # EQEmulator Core Server
 |Travis CI (Linux)|Appveyor w/ Bots (Windows)   |Appveyor w/o Bots (Windows)   |
 |:---:|:---:|:---:| 
-|[![Linux CI](https://travis-ci.org/EQEmu/Server.svg?branch=master)](https://travis-ci.org/EQEmu/Server)   |[![Build status](https://ci.appveyor.com/api/projects/status/scr25kmntx36c1ub/branch/master?svg=true)](https://ci.appveyor.com/project/KimLS/server-87crp/branch/master)   |[![Build status](https://ci.appveyor.com/api/projects/status/mdwbr4o9l6mxqofj/branch/master?svg=true)](https://ci.appveyor.com/project/KimLS/server-w0pq2/branch/master)   |
+|[![Linux CI](https://travis-ci.org/ebabel-games/everquest-server.svg?branch=master)](https://travis-ci.org/ebabel-games/everquest-server)   |[![Build status](https://ci.appveyor.com/api/projects/status/scr25kmntx36c1ub/branch/master?svg=true)](https://ci.appveyor.com/project/KimLS/server-87crp/branch/master)   |[![Build status](https://ci.appveyor.com/api/projects/status/mdwbr4o9l6mxqofj/branch/master?svg=true)](https://ci.appveyor.com/project/KimLS/server-w0pq2/branch/master)   |
 
 ***
 
@@ -17,13 +17,13 @@
 |:---:|:---:|:---:|
 |**Install Count**|![Windows Install Count](http://analytics.akkadius.com/?install_count&windows_count)|![Linux Install Count](http://analytics.akkadius.com/?install_count&linux_count)| 
 ### > Windows 
-* [Install](https://github.com/EQEmu/Server/wiki/Windows-Server)
+* [Install](https://github.com/ebabel-games/everquest-server/wiki/Windows-Server)
 
 ### > Debian/Ubuntu/CentOS/Fedora
 * You can use curl or wget to kick off the installer (whichever your OS has)
-> curl -O https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/linux_installer/install.sh install.sh && chmod 755 install.sh && ./install.sh
+> curl -O https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/scripts/linux_installer/install.sh install.sh && chmod 755 install.sh && ./install.sh
 
-> wget --no-check-certificate https://raw.githubusercontent.com/EQEmu/Server/master/utils/scripts/linux_installer/install.sh -O install.sh && chmod 755 install.sh && ./install.sh
+> wget --no-check-certificate https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/scripts/linux_installer/install.sh -O install.sh && chmod 755 install.sh && ./install.sh
 
 ## Supported Clients
 
@@ -32,7 +32,7 @@
 |<img src="http://i.imgur.com/hrwDxoM.jpg" height="150">|<img src="http://i.imgur.com/cRDW5tn.png" height="150">|<img src="http://i.imgur.com/V48kuVn.jpg" height="150">|<img src="http://i.imgur.com/IJQ0XMa.jpg" height="150">|<img src="http://i.imgur.com/OMpHkKa.png" height="100">|
 
 ## Bug Reports <img src="http://i.imgur.com/daf1Vjw.png" height="20">
-* Please use the [issue tracker](https://github.com/EQEmu/Server/issues) provided by GitHub to send us bug
+* Please use the [issue tracker](https://github.com/ebabel-games/everquest-server/issues) provided by GitHub to send us bug
 reports or feature requests.
 * The [EQEmu Forums](http://www.eqemulator.org/forums/) are also a place to submit and get help with bugs.
 
@@ -52,7 +52,7 @@ forum, although pull requests will be much quicker and easier on all parties.
 
 ## Resources
 - [EQEmulator Forums](http://www.eqemulator.org/forums)
-- [EQEmulator Wiki](https://github.com/EQEmu/Server/wiki)
+- [EQEmulator Wiki](https://github.com/ebabel-games/everquest-server/wiki)
 
 ## Related Repositories
 * [ProjectEQ Quests](https://github.com/ProjectEQ/projecteqquests)

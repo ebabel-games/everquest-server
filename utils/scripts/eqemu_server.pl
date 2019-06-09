@@ -19,7 +19,7 @@ use Time::HiRes qw(usleep);
 
 #::: Variables
 $install_repository_request_url = "https://raw.githubusercontent.com/Akkadius/EQEmuInstall/master/";
-$eqemu_repository_request_url   = "https://raw.githubusercontent.com/EQEmu/Server/master/";
+$eqemu_repository_request_url   = "https://raw.githubusercontent.com/ebabel-games/everquest-server/master/";
 
 #::: Globals
 $time_stamp   = strftime('%m-%d-%Y', gmtime());
@@ -313,12 +313,12 @@ sub check_xml_to_json_conversion {
     if (-e "eqemu_config.xml" && !-e "eqemu_config.json") {
 
         if ($OS eq "Windows") {
-            get_remote_file("https://raw.githubusercontent.com/EQEmu/Server/master/utils/xmltojson/xmltojson-windows-x86.exe", "xmltojson.exe");
+            get_remote_file("https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/xmltojson/xmltojson-windows-x86.exe", "xmltojson.exe");
             print "Converting eqemu_config.xml to eqemu_config.json\n";
             print `xmltojson eqemu_config.xml`;
         }
         if ($OS eq "Linux") {
-            get_remote_file("https://raw.githubusercontent.com/EQEmu/Server/master/utils/xmltojson/xmltojson-linux-x86", "xmltojson");
+            get_remote_file("https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/xmltojson/xmltojson-linux-x86", "xmltojson");
             print "Converting eqemu_config.xml to eqemu_config.json\n";
             print `chmod 755 xmltojson`;
             print `./xmltojson eqemu_config.xml`;
@@ -396,7 +396,7 @@ sub build_linux_source {
 
     chdir($source_dir);
 
-    print `git clone https://github.com/EQEmu/Server.git`;
+    print `git clone https://github.com/ebabel-games/everquest-server.git`;
 
     mkdir($source_dir . "/Server/build") if (!-e $source_dir . "/Server/build");
     chdir($source_dir . "/Server/build");
@@ -1164,7 +1164,7 @@ sub get_remote_file {
         }
     }
 
-    #::: wget -O db_update/db_update_manifest.txt https://raw.githubusercontent.com/EQEmu/Server/master/utils/sql/db_update_manifest.txt
+    #::: wget -O db_update/db_update_manifest.txt https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/sql/db_update_manifest.txt
     $wget = `wget -N --no-cache --cache=no --no-check-certificate --quiet -O $destination_file $request_url`;
     print "[Download] Saved: (" . $destination_file . ") from " . $request_url . "\n" if !$silent_download;
     if ($wget =~ /unable to resolve/i) {

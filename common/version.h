@@ -27,7 +27,7 @@
 /*
 	Everytime a Database SQL is added to Github,
 		increment CURRENT_BINARY_DATABASE_VERSION number and make sure you update the manifest
-	Manifest: https://github.com/EQEmu/Server/blob/master/utils/sql/db_update_manifest.txt
+	Manifest: https://github.com/ebabel-games/everquest-server/blob/master/utils/sql/db_update_manifest.txt
 */
 
 

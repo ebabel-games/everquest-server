@@ -226,7 +226,7 @@ Akkadius (KLS):
 
 == 12/16/2018 ==
 Akkadius:
-    - Implemented: Global Base Scaling: https://github.com/EQEmu/Server/wiki/NPC-Scaling
+    - Implemented: Global Base Scaling: https://github.com/ebabel-games/everquest-server/wiki/NPC-Scaling
     - Implemented: Beginning of DevTools - more to be added over time (Status >= 200)
         - Display NPC info on target
         - Display Client info on target
@@ -325,9 +325,9 @@ Uleat: Notes for manual conversion of quest script inventory slot values
 	- All slot values not addressed above remain the same
 	
 	- Additional information can be found at:
-		-- https://github.com/EQEmu/Server/wiki/Inventory-Slots
-		-- https://github.com/EQEmu/Server/wiki/Perl-API
-		-- https://github.com/EQEmu/Server/wiki/Lua-API
+		-- https://github.com/ebabel-games/everquest-server/wiki/Inventory-Slots
+		-- https://github.com/ebabel-games/everquest-server/wiki/Perl-API
+		-- https://github.com/ebabel-games/everquest-server/wiki/Lua-API
 
 == 09/03/2018 ==
 Uleat: Rework of 'invsnapshot' command and implementation of automatic inventory snapshots.
@@ -387,7 +387,7 @@ mackal: Rework of Task System, Shared Tasks still unsupported
 
 == 07/07/2018 ==
 Akkadius: Implemented a much better replacement for qglobals called 'DataBuckets'
-    - A much more detailed example can be found at: https://github.com/EQEmu/Server/wiki/Data-Buckets
+    - A much more detailed example can be found at: https://github.com/ebabel-games/everquest-server/wiki/Data-Buckets
 
 == 07/05/2018 ==
 Uleat: Reintegration of inventory-based EQDictionary references
@@ -831,7 +831,7 @@ Akkadius: Massive overhaul of the update system and EQEmu Server management util
 		- Usage analytics
 			- eqemu_server.pl now collects usage analytics, this is very helpful for our developers
 				- Example: We can see how many installs have been performed:
-					https://github.com/EQEmu/Server#server-installs
+					https://github.com/ebabel-games/everquest-server#server-installs
 				- This helps us see how often certain utilities are used as well
 		- Console Messages
 			- All script messages have been prefixed with a bracket action Ex: [Update] [Database] [Info]
@@ -1191,11 +1191,11 @@ Akkadius: Added Perl Export Settings which should heavily reduce the Perl footpr
 	- If a change is made to this table while the server is live and running, you can hot reload all zone process settings via:
 		#reloadperlexportsettings
 	- For those who wonder what "exports" are, they are reference to variables that are made available at runtime of the sub event, such as:
-		(export_qglobals) (Heavy) : $qglobals https://github.com/EQEmu/Server/blob/master/zone/embparser.cpp#L916
-		(export_item) (Heavy) : $itemcount{} $hasitem{} $oncursor{} https://github.com/EQEmu/Server/blob/master/zone/embparser.cpp#L1103
-		(export_zone) : $zoneid, $instanceid, $zoneln etc. https://github.com/EQEmu/Server/blob/master/zone/embparser.cpp#L1083
-		(export_mob) : $x, $y, $z, $h, $hpratio etc. https://github.com/EQEmu/Server/blob/master/zone/embparser.cpp#L1032
-		(export_event) : (event specific) IE: EVENT_SAY ($text) https://github.com/EQEmu/Server/blob/master/zone/embparser.cpp#L1141
+		(export_qglobals) (Heavy) : $qglobals https://github.com/ebabel-games/everquest-server/blob/master/zone/embparser.cpp#L916
+		(export_item) (Heavy) : $itemcount{} $hasitem{} $oncursor{} https://github.com/ebabel-games/everquest-server/blob/master/zone/embparser.cpp#L1103
+		(export_zone) : $zoneid, $instanceid, $zoneln etc. https://github.com/ebabel-games/everquest-server/blob/master/zone/embparser.cpp#L1083
+		(export_mob) : $x, $y, $z, $h, $hpratio etc. https://github.com/ebabel-games/everquest-server/blob/master/zone/embparser.cpp#L1032
+		(export_event) : (event specific) IE: EVENT_SAY ($text) https://github.com/ebabel-games/everquest-server/blob/master/zone/embparser.cpp#L1141
 
 == 10/16/2015 ==
 Uleat: Added command '#bot clearfollowdistance [ <target> | spawned | all ]' to coincide with the activation of the load/save feature for follow_distance
@@ -1715,7 +1715,7 @@ Akkadius: Implemented Automatic Database update and versioning system
 Akkadius: Created database revision define, this is located in version.h in common #define CURRENT_BINARY_DATABASE_VERSION 9057
 	- This revision define will need to be incremented each time a database update is made
 	- Along with a revision define increment, you will need to update the db_update manifest located in:
-		- https://raw.githubusercontent.com/EQEmu/Server/master/utils/sql/db_update_manifest.txt
+		- https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/sql/db_update_manifest.txt
 		- An entry needs to be made at the bottom of the manifest, the entry is quite simple
 		- Example: 9057|2014_11_13_spells_new_updates.sql|SHOW COLUMNS FROM `spells_new` LIKE 'disallow_sit'|empty|
 			- This latest example is checking to see if the spells_new table contains the column 'disallow_sit', if its empty, the update needs to be ran
@@ -1748,7 +1748,7 @@ Akkadius: Created database revision define, this is located in version.h in comm
 				Database up to Date: Continuing World Bootup...
 		============================================================
 		Retrieving latest database manifest...
-        URL:    https://raw.githubusercontent.com/EQEmu/Server/master/utils/sql/db_update_manifest.txt
+        URL:    https://raw.githubusercontent.com/ebabel-games/everquest-server/master/utils/sql/db_update_manifest.txt
         Saved:  db_update/db_update_manifest.txt
 
 Database Management Menu (Please Select):
@@ -1832,7 +1832,7 @@ Akkadius: Added out of range checking for Spell Save/Loads
 
 == 11/01/2014 ==
 Trevius: Fixed potential crash related to Pets/Mercs buffs when targeting themselves.
-JJ: (noudess) Revamped faction system. See https://github.com/EQEmu/Server/pull/256
+JJ: (noudess) Revamped faction system. See https://github.com/ebabel-games/everquest-server/pull/256
 
 == 10/28/2014 ==
 Uleat: Added Client::InterrogateInventory(). Can be invoked by #interrogateinv and is also called when Handle_OP_MoveItem() calls for SwapItemResync()
@@ -2188,7 +2188,7 @@ Akkadius: Removed petition console spam that does not follow traditional logging
 Akkadius: Made fix with SympatheticProcChances where it was checking for TempItem->Focus.Effect instead of TempItemAug->Focus.Effect
 
 == 08/18/2014 ==
-Uleat: Fix for https://github.com/EQEmu/Server/issues/127 -- also activated a remarked action in doors.cpp to eliminate a memory leak.
+Uleat: Fix for https://github.com/ebabel-games/everquest-server/issues/127 -- also activated a remarked action in doors.cpp to eliminate a memory leak.
 
 == 08/16/2014 ==
 KLS: (addmoreice) Trying out some unstable DB changes.  Do backup your database before trying them as master will be considered unstable for a few days at least.
